@@ -19,11 +19,27 @@ This project demonstrates the use of Word2Vec and GloVe embeddings for natural l
 
 ## Setup and Running the Application
 
-### 1. Clone the reposity: 
-#### 1. Clone the reposity: 
-##### 1. Clone the reposity: 
-First, clone the repository to your local machine.
+**1. Clone the reposity:** 
+Clone the repository to your local machine.
 ```bash
 git clone <repository_url>
 cd <repository_name>
 ```
+
+**2. Install dependencies:** 
+Install the dependencies listed in `requirements.txt`.
+```bash
+pip install -r requirements.txt
+```
+
+**3. Running the Flask App:**
+To start the Flask web application, run the following command:
+```bash
+python app/app.py
+```
+This will start the app on `http://127.0.0.1:5000/`.
+
+## Features of the Web Application
+- **Word2Vec and GloVe Model Interaction**: The web app lets you input a word and get 10 nearest neighbors based on the trained embeddings.
+  
+- **Visualization**: Results from the model (e.g., similar words) will be displayed on the webpage.
