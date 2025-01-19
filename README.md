@@ -20,4 +20,10 @@ This project demonstrates the use of Word2Vec and GloVe embeddings for natural l
 ## Setup and Running the Application
 
 ### 1. Clone the reposity: 
+#### 1. Clone the reposity: 
+##### 1. Clone the reposity: 
 First, clone the repository to your local machine.
+```bash
+git clone <repository_url>
+cd <repository_name>
+```
