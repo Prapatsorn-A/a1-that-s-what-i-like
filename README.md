@@ -10,7 +10,6 @@ This project demonstrates the use of Word2Vec and GloVe embeddings for natural l
 - `app.py`: The main Flask web application to run the model and display results.
 - `A1.ipynb`: Jupyter notebook used for training the models and running various tasks (e.g., word analogies, similarity).
 - `templates/index.html`: HTML file for the Flask app’s front-end.
-- `glove.6B.100d.txt`: Pre-trained GloVe embeddings used in the notebook for training.
 - `skipgram_model.pth`: A saved model file from the notebook for Word2Vec.
 - `word2index.pkl`: A pickle file containing a mapping from words to indices used by the model.
 - `word-test.v1.txt`: File used for word analogy tasks in the notebook.

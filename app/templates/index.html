@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Similarity Search</title>
+    <style>
+        /* General body styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #cce4ff; 
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Header styling */
+        h1 {
+            text-align: center;
+            padding: 20px;
+            background-color: #3399ff; 
+            color: white;
+            margin: 0;
+            font-size: 36px;
+        }
+
+        /* Form styling */
+        form {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            font-size: 16px;
+            width: 300px;
+            border: 2px solid #66b3ff; 
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #3399ff; 
+            color: white;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0066cc; 
+        }
+
+        /* Results section styling */
+        .results {
+            max-width: 600px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #3399ff; 
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            background-color: #e6f2ff;
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 5px;
+            font-size: 18px;
+            transition: background-color 0.3s;
+        }
+
+        li:hover {
+            background-color: #cce0ff;
+        }
+
+        /* Error message styling */
+        .error-message {
+            color: red;
+            font-size: 18px;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        /* Footer section */
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 20px;
+            background-color: #3399ff;
+            color: white;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Word Similarity Search</h1>
+
+    <form method="POST">
+        <input type="text" name="query" class="form-control" placeholder="Enter a word">
+        <button type="submit">Search</button>
+    </form>
+
+    {% if error_message %}
+        <div class="error-message">{{ error_message }}</div> <!-- Display error message if query is empty -->
+    {% endif %}
+
+    {% if query %}
+        <div class="results">
+            <h2>Top 10 Similar Words to "{{ query }}"</h2>
+            <ul>
+                {% for word in top_similar %}
+                    <li>{{ word }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    {% endif %}
+
+    <footer>
+        <p>&copy; 2025 Word Similarity Search. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
